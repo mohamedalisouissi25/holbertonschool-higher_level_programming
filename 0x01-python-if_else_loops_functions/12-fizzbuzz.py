@@ -6,4 +6,4 @@ def fizzbuzz():
             print("Buzz", end='')
         if num % 3 and num % 5:
             print("{:d}".format(num), end='')
-        print(end=' ')
+print(end=' ')
