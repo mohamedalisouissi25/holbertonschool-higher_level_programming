@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-   """
-   A Locked class
-   """
+"""
+A Locked class
+"""
+
+
 class LockedClass:
     """
     A class that prevents the user from dynamically creating
