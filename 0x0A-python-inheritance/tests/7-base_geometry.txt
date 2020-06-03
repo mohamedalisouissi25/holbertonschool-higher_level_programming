@@ -1,31 +1,27 @@
-Module ``Base Geometry``
-========================
-Using ``BaseGeometry``
-------------------------
+The ``1-my_list`` module
+======================
 
-Import BaseGeometry class
+import the class:
 
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry()
 
-1 - raise an exception from the area() method
+test:
 
-    >>> bg = BaseGeometry()
-    >>> bg.area()
-    Traceback (most recent call last):
+	>>> bg.integer_validator("dali", 0)
+	Traceback (most recent call last):
         ...
-    Exception: area() is not implemented
+        ValueError: dali must be greater than 0
 
-2 - raise a TypeError exception
-
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("Integer", "lalala")
-    Traceback (most recent call last):
+	>>> bg.integer_validator("dali", "souissi")
+	Traceback (most recent call last):
         ...
-    TypeError: Integer must be an integer
+        TypeError: dali must be an integer
 
-3 - pass empty params
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator()
-    Traceback (most recent call last):
+
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
         ...
-    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> bg.integer_validator("distance", 4)
