@@ -6,18 +6,17 @@ import the class:
 	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 	>>> bg = BaseGeometry()
 
-tests:
+test:
 
-
-	>>> bg.integer_validator("dali", 0)
+	>>> bg.integer_validator("age", 0)
 	Traceback (most recent call last):
         ...
-        ValueError: dali must be greater than 0
+        ValueError: age must be greater than 0
 
-	>>> bg.integer_validator("dali", "souissi")
+	>>> bg.integer_validator("age", "twentiseven")
 	Traceback (most recent call last):
         ...
-        TypeError: dali must be an integer
+        TypeError: age must be an integer
 
 
 	>>> bg.integer_validator()
@@ -25,4 +24,4 @@ tests:
         ...
 	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-	>>> bg.integer_validator("souissi", 4)
+	>>> bg.integer_validator("disctance", 12)
