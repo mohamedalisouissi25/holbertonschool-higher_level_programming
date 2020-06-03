@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-"""
-class base geometry module
-"""
+""" class base geometry module """
 
 
 class BaseGeometry():
     """ empty base geometry class """
-
     def area(self):
-        """ exception whith a message  """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
