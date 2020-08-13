@@ -8,9 +8,9 @@ import sys
 if __name__ == "__main__":
     dal = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
                           passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
-    csr = dal.cursor()
+    csr = dal.csr()
     csr.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id")
-    rows = cursor.fetchall()
+    rows = csr.fetchall()
 
     for row in rows:
         print(row)
