@@ -17,7 +17,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     Session = sessionmaker(bind=eng)
     sess = Session()
-    dal = s.query(State).filter(State.name.like("%a%")).all()
+    dal = sess.query(State).filter(State.name.like("%a%")).all()
 
     for row in dal:
         sess.delete(row)
