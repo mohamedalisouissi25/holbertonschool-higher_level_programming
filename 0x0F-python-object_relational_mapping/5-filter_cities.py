@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-a script that lists all cities in the input state from the database hbtn_0e_4_usa
+a script that lists all cities in the input state from
+the database hbtn_0e_4_usa
 """
 
 import MySQLdb
@@ -9,7 +10,7 @@ import sys
 if __name__ == "__main__":
 
     dal = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                           passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
+                          passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     cursor = dal.cursor()
     cursor.execute("SELECT cities.name\
                 FROM cities JOIN states\
