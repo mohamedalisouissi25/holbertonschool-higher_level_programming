@@ -2,8 +2,8 @@
 
 const dct = module.require('./101-data.js').dict;
 const dct2 = {};
-for (let k in dct) {
-if (dct2[dct[k]] !== undefined) {
+for (const k in dct) {
+  if (dct2[dct[k]] !== undefined) {
     dct2[dct[k]].push(k);
   } else {
     dct2[dct[k]] = [k];
