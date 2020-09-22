@@ -5,7 +5,7 @@ request(process.argv[2], function (err, response, body) {
   if (err) {
     console.log(err);
   }
-  const list = JSON.parse(err);
+  const list = JSON.parse(body);
   for (const a in list) {
     result[list[a].userId] = 0;
   }
