@@ -14,7 +14,7 @@ request(process.argv[2], function (err, response, body) {
       if (result[list[b].userId] === undefined) {
         result[list[b].userId] = 1;
       } else {
-      result[list[b].userId]++;
+        result[list[b].userId]++;
       }
     }
   }
