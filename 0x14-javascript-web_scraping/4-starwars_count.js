@@ -7,8 +7,8 @@ request(process.argv[2], function (err, response, body) {
   } else {
     const list = JSON.parse(body);
     for (const a in list.results) {
-      for (const b in list.results[a].charachters) {
-        if (list.results[a].charachters[b].include('18')) {
+      for (const b in list.results[a].characters) {
+        if (list.results[a].characters[b].include('18')) {
           comp++;
         }
       }
