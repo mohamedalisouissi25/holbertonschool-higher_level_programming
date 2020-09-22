@@ -12,7 +12,7 @@ request(process.argv[2], function (err, response, body) {
   for (const b in list) {
     if (list[b].completed === true) {
       if (result[list[b].userId] === undefined) {
-        result[list[b].userId] = 1;
+        result[list[b].userId] = 0;
       } else {
         result[list[b].userId]++;
       }
