@@ -1,14 +1,14 @@
 #!/usr/bin/node
 const request = require('request');
 let comp = 0;
-let a = 0;
-let b = 0;
 request(process.argv[2], function (err, response, body) {
-  if (err) { console.log(err); } else {
+  if (err) {
+    return console.log(err);
+  } else {
     const list = JSON.parse(body);
-    for (a in list.results) {
-      for (b in list.results[a].charachters) {
-        if (list.results[a].characters[b].search('18') !== -1) {
+    for (const a in list.results) {
+      for (const b in list.results[a].charachters) {
+        if (list.results[a].characters[b].include('18')) {
           comp++;
         }
       }
