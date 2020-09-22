@@ -6,10 +6,10 @@ request(process.argv[2], function (err, response, body) {
     console.log(err);
   }
   const list = JSON.parse(err);
-  for (const a in result) {
+  for (const a in list) {
     result[list[a].userId] = 0;
   }
-  for (const b in result) {
+  for (const b in list) {
     if (list[b].completed === true) {
       if (result[list[b].userId] === undefined) {
         result[list[b].userId] = 1;
