@@ -8,7 +8,7 @@ request(process.argv[2], function (err, response, body) {
     const list = JSON.parse(body);
     for (a in list.results) {
       for (b in list.results[a].charachters) {
-        if (list.results[a].characters[b] === 'https://swapi-api.hbtn.io/api/people/18/') {
+        if (list.results[a].characters[b].search('18') !== -1) {
           comp++;
         }
       }
